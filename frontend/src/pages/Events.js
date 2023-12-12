@@ -1,22 +1,14 @@
-import { Link } from "react-router-dom";
-const EventsPage = () => {
-  const EVENTS_DUMMY = [
-    { id: "e1", title: "Event 1" },
-    { id: "e2", title: "Event 2" },
-    { id: "e3", title: "Event 3" },
-  ];
+import { useLoaderData } from "react-router-dom";
+
+import EventsList from "../components/EventsList";
+
+function EventsPage() {
+  const events = useLoaderData();
   return (
     <>
-      <h1>Events Page</h1>
-      <ul>
-        {EVENTS_DUMMY.map((event) => (
-          <li key={event.id}>
-            <Link to={`${event.id}`}>{event.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <EventsList events={events} />
     </>
   );
-};
+}
 
 export default EventsPage;
