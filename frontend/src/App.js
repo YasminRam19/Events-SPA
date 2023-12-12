@@ -12,6 +12,7 @@ import NewEventPage from "./pages/NewEvent";
 import EditEventPage from "./pages/EditEvent";
 import MainNavigation from "./components/MainNavigation";
 import EventsRootLayout from "./pages/EventsRoot";
+import ErrorPage from "./pages/Error";
 
 // Challenge / Exercise
 
@@ -38,7 +39,7 @@ import EventsRootLayout from "./pages/EventsRoot";
 
 function App() {
   const routesDefinitions = createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
       <Route index={true} element={<HomePage />} />
       <Route path="events" element={<EventsRootLayout />}>
         <Route index={true} element={<EventsPage />} loader={eventsLoader} />
