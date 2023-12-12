@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/Home";
 import RootLayout from "./pages/Layout";
-import EventsPage from "./pages/Events";
+import EventsPage, { loader as eventsLoader } from "./pages/Events";
 import EventDetailPage from "./pages/EventDetail";
 import NewEventPage from "./pages/NewEvent";
 import EditEventPage from "./pages/EditEvent";
@@ -41,19 +41,7 @@ function App() {
     <Route path="/" element={<RootLayout />}>
       <Route index={true} element={<HomePage />} />
       <Route path="events" element={<EventsRootLayout />}>
-        <Route
-          index={true}
-          element={<EventsPage />}
-          loader={async () => {
-            const response = await fetch("http://localhost:8080/events");
-            if (!response.ok) {
-              //...
-            } else {
-              const resData = await response.json();
-              return resData.events;
-            }
-          }}
-        />
+        <Route index={true} element={<EventsPage />} loader={eventsLoader} />
         <Route path=":eventId" element={<EventDetailPage />} />
         <Route path="new" element={<NewEventPage />} />
         <Route path=":eventId/edit" element={<EditEventPage />} />
