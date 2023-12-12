@@ -45,13 +45,11 @@ function App() {
       <Route index={true} element={<HomePage />} />
       <Route path="events" element={<EventsRootLayout />}>
         <Route index={true} element={<EventsPage />} loader={eventsLoader} />
-        <Route
-          path=":eventId"
-          element={<EventDetailPage />}
-          loader={eventDetailLoader}
-        />
+        <Route path=":eventId" id="event-detail" loader={eventDetailLoader}>
+          <Route index={true} element={<EventDetailPage />} />
+          <Route path="edit" element={<EditEventPage />} />
+        </Route>
         <Route path="new" element={<NewEventPage />} />
-        <Route path=":eventId/edit" element={<EditEventPage />} />
       </Route>
     </Route>
   );
