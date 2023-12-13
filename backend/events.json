@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"Taylor Swift","image":"https://prowly-uploads.s3.eu-west-1.amazonaws.com/uploads/landing_page/template_background/246546/b84f87bb37f69c7bfcab7141bd9e0df7.jpg","date":"2024-02-02","description":"The Eras","id":"478f0971-adc9-484e-9746-091cb84df02d"},{"title":"Jonas Brothers The Tour Mexico","image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wbaltv.com%2Farticle%2Fjonas-brothers-five-albums-one-night-tour-baltimore%2F43770817&psig=AOvVaw1W0UwzrvW5OFOn9xTRFcNK&ust=1702519936218000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCjyJOri4MDFQAAAAAdAAAAABAD","date":"2024-02-14","description":"Five albums, one night","id":"89f5655f-3cff-4138-a632-564add67bd2c"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
