@@ -9,6 +9,7 @@ import RootLayout from "./pages/Layout";
 import EventsPage, { loader as eventsLoader } from "./pages/Events";
 import EventDetailPage, {
   loader as eventDetailLoader,
+  action as deleteEventAction,
 } from "./pages/EventDetail";
 import NewEventPage, { action as newEventAction } from "./pages/NewEvent";
 import EditEventPage from "./pages/EditEvent";
@@ -46,7 +47,11 @@ function App() {
       <Route path="events" element={<EventsRootLayout />}>
         <Route index={true} element={<EventsPage />} loader={eventsLoader} />
         <Route path=":eventId" id="event-detail" loader={eventDetailLoader}>
-          <Route index={true} element={<EventDetailPage />} />
+          <Route
+            index={true}
+            element={<EventDetailPage />}
+            action={deleteEventAction}
+          />
           <Route path="edit" element={<EditEventPage />} />
         </Route>
         <Route path="new" element={<NewEventPage />} action={newEventAction} />
