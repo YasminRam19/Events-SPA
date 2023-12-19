@@ -17,6 +17,8 @@ import MainNavigation from "./components/MainNavigation";
 import EventsRootLayout from "./pages/EventsRoot";
 import ErrorPage from "./pages/Error";
 import { action as manipulateEventAction } from "./components/EventForm";
+import NewsletterPage, { action as newsletterAction } from "./pages/Newsletter";
+
 // Challenge / Exercise
 
 // 1. Add five new (dummy) page components (content can be simple <h1> elements)
@@ -64,6 +66,11 @@ function App() {
           action={manipulateEventAction}
         />
       </Route>
+      <Route
+        path="newsletter"
+        element={<NewsletterPage />}
+        action={newsletterAction}
+      />
     </Route>
   );
   const router = createBrowserRouter(routesDefinitions);
